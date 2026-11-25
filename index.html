@@ -4,20 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
   <title>Xinrui Zhou</title>
-  <meta name="description" content="Xinrui Zhou is an engineer turned technical product manager who builds tools for product and ops teams.">
+  <meta name="description" content="Xinrui Zhou’s personal index: books, cooking, cycling, and the chapters so far.">
+  <link rel="canonical" href="https://xinrui-z.github.io/">
   <meta property="og:title" content="Xinrui Zhou">
+  <meta property="og:site_name" content="Xinrui Zhou">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://xinrui-z.github.io/">
-  <meta property="og:image" content="https://xinrui-z.github.io/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:description" content="A tree of life: my work, the things I love, and what keeps me grounded.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 26C8 14 16 6 27 5c-1 11-9 19-21 21z' fill='%23a9c08a' stroke='%232b2a24' stroke-width='1.5'/%3E%3Cpath d='M6 26 22 10' stroke='%232b2a24' stroke-width='1.2'/%3E%3C/svg%3E">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:description" content="Books I keep, food I make, and the chapters so far.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%23111'/%3E%3Crect x='2' y='2' width='2' height='2' fill='%23fff'/%3E%3Crect x='4' y='4' width='2' height='2' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400;500;600&family=Silkscreen&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,96 +26,130 @@
 
   <main id="content" tabindex="-1">
 
-    <!-- ───────── Plate I · Home ───────── -->
+    <!-- ───────── Home ───────── -->
     <div class="view home" data-route="">
-      <div class="plate-grid">
-        <figure class="plate">
-          <div class="plate-head">
-            <span>Pl. I</span>
-            <span class="plate-title">Arbor vitae</span>
-            <span class="plate-right"><span id="plate-years">2020 – now</span><button id="replay" class="replay" type="button" aria-label="Grow the tree again" title="Grow the tree again">↻</button></span>
+      <header class="masthead" data-masthead></header>
+
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">A personal index</p>
+          <h1>Hi, I’m Xinrui.</h1>
+          <p class="intro">I read history, cook and bake, ride my bike, and take long walks. This is where I keep track of it all.</p>
+        </div>
+
+        <section class="now" aria-labelledby="now-title">
+          <div class="now-head">
+            <h2 id="now-title">Now</h2>
+            <span data-updated></span>
           </div>
-          <svg id="tree" viewBox="0 0 600 790" role="group" aria-labelledby="fig1-cap"></svg>
-          <figcaption id="fig1-cap" class="fig-cap">
-            <span class="fig-no">Fig. 1.</span> <i>Arbor vitae xinrui</i>. The trunk is time, running from 2020 to today. Each limb is a chapter of my work, and its leaves are the things I made along the way. Four vines, fitness, cooking, cycling, and walks, wind through every chapter, and the roots are what keeps me grounded.
-            <span id="limb-key" class="limb-key"></span>
-          </figcaption>
-        </figure>
+          <dl class="facts" data-now></dl>
+        </section>
+      </section>
 
-        <aside class="side">
-          <p class="kicker">Hi, I’m</p>
-          <h1>Xinrui Zhou</h1>
-          <p class="intro">I started out as an engineer and now work as a <em>technical product manager</em>. I use engineering to make products better, mostly by building tools that help product and ops teams do their jobs.</p>
+      <figure class="timeline-figure">
+        <div class="figure-head">
+          <span class="fig-label">Timeline</span>
+          <span class="figure-rule" aria-hidden="true"></span>
+          <span class="fig-range">2020 → now</span>
+          <button id="replay" class="replay" type="button" aria-label="Play the timeline again" title="Play it again">↻</button>
+        </div>
+        <svg id="timeline" viewBox="0 0 900 400" role="group" aria-label="My timeline, from 2020 to now. Use Tab to move through chapters, habits, and personal bests."></svg>
+        <ul class="tl-legend" aria-hidden="true">
+          <li><span class="key key-bar pat-1"></span>chapter</li>
+          <li><span class="key key-tick"></span>detail</li>
+          <li><span class="key key-dash"></span>habit</li>
+          <li><span class="key key-mark"></span>personal best</li>
+          <li class="tl-hint">Tap anything for details.</li>
+        </ul>
+        <figcaption class="lens" id="lens">
+          <button class="lens-close" type="button" aria-label="Close">×</button>
+          <p class="lens-kicker">Up close</p>
+          <p class="lens-title">Hover over or tap the timeline.</p>
+          <p class="lens-meta">Each bar is a chapter. The dashed lines are habits I’ve kept since before 2020.</p>
+          <a class="lens-more" href="#/" hidden></a>
+        </figcaption>
+      </figure>
 
-          <dl class="label-card">
-            <div><dt>Now</dt><dd>Technical PM, building tools for product ops</dd></div>
-            <div><dt>Before</dt><dd>Engineer, startup co-founder</dd></div>
-            <div><dt>For fun</dt><dd>Working out, Chinese cooking, baking, cycling, long walks</dd></div>
-            <div><dt>Reading</dt><dd>History and psychology</dd></div>
-            <div><dt>GitHub</dt><dd><a class="gh-link" href="https://github.com/xinrui-z" target="_blank" rel="noopener noreferrer">xinrui-z ↗</a> <span class="mono" id="lc-growth"></span></dd></div>
-          </dl>
-
-          <nav class="index" aria-label="Index">
-            <a href="#/about"><span class="num">II.</span> Notes <span class="what">about me</span></a>
-            <a href="#/work"><span class="num">III.</span> Work <span class="what">what I do</span></a>
-            <a href="#/open-source"><span class="num">IV.</span> Open source <span class="what">on GitHub</span></a>
-          </nav>
-
-          <div class="lens" id="lens" aria-live="polite">
-            <button class="lens-close" type="button" aria-label="Close">×</button>
-            <p class="lens-kicker">Under the lens</p>
-            <p class="lens-title">Hover over anything on the plate.</p>
-            <p class="lens-meta">Every leaf, vine, and root has a story. Leaves with links open when you click them.</p>
-          </div>
-        </aside>
-      </div>
-
+      <nav class="index" aria-label="Index">
+        <a href="#/about"><span class="cur" aria-hidden="true">&gt;</span><span class="name">About</span><span class="what">a little about me</span></a>
+        <a href="#/reading"><span class="cur" aria-hidden="true">&gt;</span><span class="name">Reading</span><span class="what">books that stayed with me</span></a>
+        <a href="#/kitchen"><span class="cur" aria-hidden="true">&gt;</span><span class="name">Kitchen</span><span class="what">what I cook and bake</span></a>
+        <a href="#/work"><span class="cur" aria-hidden="true">&gt;</span><span class="name">Chapters</span><span class="what">where I’ve been</span></a>
+      </nav>
 
       <footer class="footer" data-social></footer>
     </div>
 
-    <!-- ───────── Plate II · Notes ───────── -->
+    <!-- ───────── About ───────── -->
     <div class="view page" data-route="about" hidden>
-      <nav class="back-nav" aria-label="Back navigation"><a href="#/">← Plate I</a></nav>
-      <p class="kicker">Pl. II · Notes</p>
+      <header class="masthead" data-masthead></header>
+      <p class="eyebrow">A little about me</p>
       <h1>About</h1>
       <div class="prose">
-        <p>I’m Xinrui. I started out as an engineer, and these days I’m a technical product manager. Engineering is still my main tool, but now I point it at the product: I build tools that help product and ops teams move faster and make better calls.</p>
-        <p>I spent 2020 to 2024 at university. Along the way, I did research, took part in academic competitions, and built engineering projects, from algorithms to full-stack apps. In my final year, from November 2023 to June 2024, I did more research and an internship at an AI lab.</p>
-        <p>In July 2024, I co-founded an AI startup that built consumer apps on top of large language models, and I had a hand in everything from product strategy to coordinating the team. When that chapter wrapped up in January 2025, I took six months off to step back and recharge, and I came back with a much clearer sense of what I want to do.</p>
-        <p>I’ve been an algorithm engineer, a full-stack developer, a product manager, and once in a while a designer. I like switching hats, because each role shows me a different side of how things get built.</p>
-        <h2>Outside of work</h2>
-        <p>I work out, cook (mostly Chinese food, plus a lot of baking), ride my bike, and take long walks. I’m happy in my own company, and quiet time alone is how I recharge.</p>
-        <p>I love reading about history and psychology.</p>
-        <p>I love animals, especially cats and dogs, and I have a soft spot for giant pandas.</p>
+        <p>I’m Xinrui. I work at AI startups, somewhere between operations, product, and developer relations.</p>
+        <p>I spent 2020 to 2024 in college, doing research, entering competitions, and building engineering projects on the side. After graduating, I co-founded a startup, then took six months off to reset.</p>
+        <p>I like having a few things going at once: a book next to a recipe, a long walk to work through a problem, a bike ride to make an ordinary afternoon feel a little bigger.</p>
+        <h2>Off the clock</h2>
+        <p>I work out, cook, bake, ride my bike, and take long walks. Time alone is how I recharge.</p>
+        <p>I read mostly history, psychology, and novels. I also have a soft spot for cats, dogs, and giant pandas.</p>
+        <h2>Say hi</h2>
+        <p>I’m always happy to talk books, baking, bikes, or AI products: <a href="mailto:xinruizhou2002@gmail.com">xinruizhou2002@gmail.com</a>.</p>
       </div>
       <footer class="footer" data-social></footer>
     </div>
 
-    <!-- ───────── Plate III · Work ───────── -->
+    <!-- ───────── Reading ───────── -->
+    <div class="view page wide" data-route="reading" hidden>
+      <header class="masthead" data-masthead></header>
+      <p class="eyebrow">Reading</p>
+      <h1>Bookshelf</h1>
+      <p class="lede">Books that stayed with me, and what I took from each.</p>
+      <div class="reading-list" data-reading-list></div>
+      <footer class="footer" data-social></footer>
+    </div>
+
+    <!-- ───────── Kitchen ───────── -->
+    <div class="view page wide" data-route="kitchen" hidden>
+      <header class="masthead" data-masthead></header>
+      <p class="eyebrow">Kitchen</p>
+      <h1>Kitchen index</h1>
+      <p class="lede">Dishes, buns, bread, and dumplings I like to make.</p>
+      <div class="kitchen-grid" data-kitchen-list></div>
+      <footer class="footer" data-social></footer>
+    </div>
+
+    <!-- ───────── Chapters ───────── -->
     <div class="view page" data-route="work" hidden>
-      <nav class="back-nav" aria-label="Back navigation"><a href="#/">← Plate I</a></nav>
-      <p class="kicker">Pl. III · Work</p>
-      <h1>Work</h1>
-      <p class="lede">From writing code to building products, and the tools that support them.</p>
+      <header class="masthead" data-masthead></header>
+      <p class="eyebrow">Chapters</p>
+      <h1>Chapters</h1>
+      <p class="lede">The big stretches so far, newest first.</p>
 
       <section class="work-sec">
-        <h2><span class="sec-letter">Now</span> Technical product manager</h2>
-        <p>I use engineering to make products better: internal tools, automations, and prototypes that take busywork off product and ops teams and make new ideas cheaper to test.</p>
+        <h2><span class="sec-letter">2025–now</span> Product &amp; operations</h2>
+        <p class="when">Jul 2025 – now</p>
+        <p>Operations, product, and developer relations at AI startups.</p>
       </section>
 
       <section class="work-sec">
-        <h2><span class="sec-letter">2024–25</span> Co-founder, AI startup</h2>
-        <p class="when">Jul 2024 – Jan 2025</p>
-        <p>I co-founded a startup that built consumer apps on top of large language models. I worked on everything from product strategy to coordinating the team, and learned firsthand what it takes to put AI in front of real users.</p>
+        <h2><span class="sec-letter">2025</span> A pause</h2>
+        <p class="when">Jan – Jun 2025</p>
+        <p>Six months off after the startup, to rest, reflect, and see what still mattered once things got quiet.</p>
       </section>
 
       <section class="work-sec">
-        <h2><span class="sec-letter">2020–24</span> University</h2>
-        <p>Four years of study, with plenty happening alongside the coursework.</p>
+        <h2><span class="sec-letter">2024</span> A startup I co-founded</h2>
+        <p class="when">Jul – Dec 2024</p>
+        <p>A short, intense run building consumer apps on top of large language models with a small team. It taught me a lot about pace, uncertainty, and how fast an idea changes once real people start using it.</p>
+      </section>
+
+      <section class="work-sec">
+        <h2><span class="sec-letter">2020–2024</span> College</h2>
+        <p class="when">Sep 2020 – Jun 2024</p>
+        <p>Four years of classes, with plenty going on outside them.</p>
         <ul class="entries timeline">
-          <li><span class="mono">2021 – 2023</span> Research and academic competitions</li>
-          <li><span class="mono">2021 – 2024</span> Engineering projects, from algorithms to full-stack apps</li>
+          <li><span class="mono">2021–2023</span> Research and academic competitions</li>
+          <li><span class="mono">2021–2024</span> Engineering projects, from algorithms to full-stack apps</li>
           <li><span class="mono">Nov 2023 – Jun 2024</span> More research, plus an internship at an AI lab</li>
         </ul>
       </section>
@@ -122,37 +157,10 @@
       <section class="work-sec">
         <h2><span class="sec-letter">Awards</span> Recognition</h2>
         <ul class="entries">
-          <li>ACF Outstanding Graduation Thesis Award, 2024</li>
-          <li>Pioneer Volunteer, China Foundation for Poverty Alleviation, 2020 and 2021</li>
+          <li>Outstanding Undergraduate Thesis Award, ACF, 2024</li>
+          <li>Named a Pioneer Volunteer by the China Foundation for Poverty Alleviation, 2020 and 2021</li>
         </ul>
       </section>
-      <footer class="footer" data-social></footer>
-    </div>
-
-    <!-- ───────── Plate IV · Open source ───────── -->
-    <div class="view page wide" data-route="open-source" hidden>
-      <nav class="back-nav" aria-label="Back navigation"><a href="#/">← Plate I</a></nav>
-      <p class="kicker">Pl. IV · Open source</p>
-      <h1>Open source</h1>
-      <p class="lede">My public work on GitHub, mostly hooking AI models into the tools developers already use. <a class="gh-link" href="https://github.com/xinrui-z" target="_blank" rel="noopener noreferrer">github.com/xinrui-z ↗</a></p>
-
-      <section class="phenology" aria-labelledby="fig3-title">
-        <div class="sec-head">
-          <h2 id="fig3-title"><span class="fig-no">Fig. 3.</span> Phenology</h2>
-          <span id="phen-readout" class="mono" aria-live="polite">&nbsp;</span>
-        </div>
-        <div class="phen-wrap">
-          <svg id="phenology" role="img" aria-label="GitHub contribution calendar for the past year"></svg>
-        </div>
-        <div class="phen-foot">
-          <p class="fig-cap">Daily GitHub contributions over the past year, <b id="contrib-total">…</b> in total. Each dot is one day, and bigger, darker dots mean busier days.</p>
-          <svg class="phen-legend" viewBox="0 0 120 14" aria-hidden="true"></svg>
-        </div>
-      </section>
-
-      <h2 class="cat-title">Merged pull requests</h2>
-      <p class="lede small" id="pr-summary">Merged pull requests, by repository.</p>
-      <div id="pr-groups" class="pr-groups"></div>
       <footer class="footer" data-social></footer>
     </div>
 
@@ -161,8 +169,8 @@
   <noscript>
     <div class="page">
       <h1>Xinrui Zhou</h1>
-      <p>Engineer turned technical product manager. I build tools that help product and ops teams.</p>
-      <p><a href="https://github.com/xinrui-z">github.com/xinrui-z</a> · <a href="mailto:xinruizhou2002@gmail.com">email</a></p>
+      <p>A personal index of books, cooking, and the chapters so far.</p>
+      <p><a href="mailto:xinruizhou2002@gmail.com">Email</a> · <a href="https://github.com/xinrui-z">GitHub</a></p>
     </div>
   </noscript>
 
