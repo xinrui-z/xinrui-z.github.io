@@ -95,6 +95,7 @@ window.LIFE = {
 
   // Personal bests. `vine` is the label of the habit line the mark sits on.
   marks: [
+    { vine: 'fitness', date: '2021-01-03', title: 'Longest run: 8 km', text: 'About 5 miles.' },
     { vine: 'fitness', date: '2022-11-27', title: 'Fastest run: 3:40 per km', text: 'That’s about 5:54 per mile.' },
     { vine: 'cycling', date: '2026-10-06', title: 'Longest ride: 18.04 km', text: 'About 11.2 miles. Next up: 20.27 km on New Year’s Eve to ring in 2027.' },
   ],
